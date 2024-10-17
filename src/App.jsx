@@ -1,0 +1,66 @@
+import { useState } from 'react';
+import MiniCards from './components/cardItem';
+import data from './data';
+import profile from './assets/img/image-jeremy.png';
+
+function App() {
+
+  const [currentDash, setCurrentDash] = useState('daily');
+
+  const dailyBtn = () => {
+    setCurrentDash('daily');
+  }
+
+  const weeklyBtn = () => {
+    setCurrentDash('weekly')
+  }
+
+  const monthlyBtn = () => {
+    setCurrentDash('monthly')
+  }
+
+  const btn = document.querySelectorAll('.btn-card-controll');
+
+  var activeItem = function(manual) {
+     btn.forEach(btnItem => {
+      btnItem.classList.remove('active')
+     })
+     btn[manual].classList.add('active')
+  }
+
+  btn.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      activeItem(i)
+    })
+  })
+
+
+  const Cards = data.map(item => {
+    return (
+       currentDash === 'daily' ?  <MiniCards title={item.title} tipo={item.timeframes.daily.current} info={'daily'} subtipo={item.timeframes.daily.previous} img={item.img}  /> : currentDash === 'weekly' ?  <MiniCards title={item.title} tipo={item.timeframes.weekly.current} subtipo={item.timeframes.weekly.previous} img={item.img} info={'Last  Weekly'}  /> : currentDash === 'monthly' ?  <MiniCards title={item.title} tipo={item.timeframes.monthly.current} subtipo={item.timeframes.monthly.previous} img={item.img} info={' Last Monthly'} /> : 'none'
+    )
+  })
+
+
+
+  return (
+    <main>
+    <section id="controll-card">
+      <div id="blue-top">
+        <div id='img-container'>
+        <img src={profile} alt="profile ilustration man" />
+        </div>
+        <h1>Report for <br id="mobile"/> <span id="username">Jeremy <br id="desk"/>  Robson</span> </h1>
+      </div>
+      <div className='btn-line'>
+       <button className='btn-card-controll' onClick={dailyBtn}>Daily</button>
+       <button className='btn-card-controll' onClick={weeklyBtn}>Weekly</button>
+       <button className='btn-card-controll' onClick={monthlyBtn}>Monthly</button>
+      </div>
+    </section>
+       {Cards}
+    </main>
+  )
+}
+
+export default App
