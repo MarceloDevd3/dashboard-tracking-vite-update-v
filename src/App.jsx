@@ -45,17 +45,17 @@ function App() {
 
   return (
     <main role='main'>
-    <section id='controll-card'>
+    <section id='controll-card' aria-labelledby='controle profile zone'>
       <div id='blue-top'>
         <div id='img-container'>
         <img src={profile} alt='profile ilustration man' />
         </div>
         <h1>Report for <br id='mobile'/> <span id='username'>Jeremy <br id='desk'/>  Robson</span> </h1>
       </div>
-      <div className='btn-line'>
-       <button className='btn-card-controll' onClick={dailyBtn}>Daily</button>
-       <button className='btn-card-controll' onClick={weeklyBtn}>Weekly</button>
-       <button className='btn-card-controll' onClick={monthlyBtn}>Monthly</button>
+    <div className='btn-line' aria-labelledby='controle bar'>
+       <button className='btn-card-controll' aria-label="daily option"  onClick={dailyBtn}>Daily</button>
+       <button className='btn-card-controll' aria-label="weekly option"  onClick={weeklyBtn}>Weekly</button>
+       <button className='btn-card-controll' aria-label="monthly option"  onClick={monthlyBtn}>Monthly</button>
       </div>
     </section>
        {Cards}
