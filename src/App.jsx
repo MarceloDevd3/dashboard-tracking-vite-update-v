@@ -44,13 +44,13 @@ function App() {
 
 
   return (
-    <main>
-    <section id="controll-card">
-      <div id="blue-top">
+    <main role='main'>
+    <section id='controll-card'>
+      <div id='blue-top'>
         <div id='img-container'>
-        <img src={profile} alt="profile ilustration man" />
+        <img src={profile} alt='profile ilustration man' />
         </div>
-        <h1>Report for <br id="mobile"/> <span id="username">Jeremy <br id="desk"/>  Robson</span> </h1>
+        <h1>Report for <br id='mobile'/> <span id='username'>Jeremy <br id='desk'/>  Robson</span> </h1>
       </div>
       <div className='btn-line'>
        <button className='btn-card-controll' onClick={dailyBtn}>Daily</button>
