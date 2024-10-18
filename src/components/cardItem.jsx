@@ -4,7 +4,6 @@ import ellipsisIcon from '../assets/img/icon-ellipsis.svg';
 export default function ControlCard(props) {
 
   return (
-
     <article className={props.class}>
       <div className={props.title + ' mini-card-bg'}>
       <img src={props.img} alt={'icon ' + props.title} className='im-item'  />
