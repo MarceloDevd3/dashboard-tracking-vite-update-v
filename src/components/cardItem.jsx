@@ -11,11 +11,11 @@ export default function ControlCard(props) {
       <div className='mini-card-info'>
         <div className='row'>
           <h2 className='row-title'>{props.title}</h2>
-          <div className='block-img'>
+          <button className='block-img'>
               <img src={ellipsisIcon} alt='bubble' />
-          </div>
+          </button>
         </div>
-        <div className='row'>
+        <div className='row row-'>
            <h2 className='hours'>{props.tipo}hrs</h2>
            <h3 className='hours-complement-info'>{props.info}  -{props.subtipo}hrs</h3>
           </div>

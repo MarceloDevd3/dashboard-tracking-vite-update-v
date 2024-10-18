@@ -59,7 +59,7 @@ function App() {
        <button className='btn-card-controll' aria-label="monthly option"  onClick={monthlyBtn}>Monthly</button>
       </div>
     </section>
-       {Cards}
+    {Cards}
     </main>
   )
 }
