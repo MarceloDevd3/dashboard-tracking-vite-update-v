@@ -9,6 +9,7 @@ export default [
   {
     "title": "Work",
     "img": work,
+    "class": "mini-card work",
     "timeframes": {
       "daily": {
         "current": 5,
@@ -27,6 +28,7 @@ export default [
   {
     "title": "Play", 
     "img": play,
+    "class": "mini-card play",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -45,6 +47,7 @@ export default [
   {
     "title": "Study",
     "img": study,
+    "class": "mini-card study",
     "timeframes": {
       "daily": {
         "current": 0,
@@ -63,6 +66,7 @@ export default [
   {
     "title": "Exercise",
     "img": exercise,
+    "class": "mini-card exercise",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -81,6 +85,7 @@ export default [
   {
     "title": "Social",
     "img": social,
+    "class": "mini-card social",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -99,6 +104,7 @@ export default [
   {
     "title": "Self Care",
     "img": selfCare,
+    "class": "mini-card self",
     "timeframes": {
       "daily": {
         "current": 0,

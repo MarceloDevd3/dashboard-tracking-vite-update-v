@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+--Blue: hsl(246, 80%, 60%);
+--Light-red-work: hsl(15, 100%, 70%);
+--Soft-blue-play: hsl(195, 74%, 62%);
+--Light-red-study: hsl(348, 100%, 68%);
+--Lime-green-exercise: hsl(145, 58%, 55%);
+--Violet-social: hsl(264, 64%, 52%);
+--Soft-orange-self-care: hsl(43, 84%, 65%);
+/*### Neutral*/
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+
+body {
+    font-size: 1.125em;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--Very-dark-blue);
+}
+
+main  {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    max-width: 300px;
+    row-gap: 25px;
+    margin: 25px auto;
+}
+
+
+main #controll-card {
+  background-color: var(--Dark-blue);
+}
+main #controll-card, main .mini-card {
+    grid-column: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+main #controll-card #blue-top #img-container img {
+    max-width: 50px;
+    border: 2.7px solid #fff;
+    border-radius: 50px;
+}
+
+main #controll-card #blue-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    background-color: #5746ea;
+    border-radius: 10px;
+    height: 100px;
+}
+main #controll-card #blue-top h1 {
+    font-size: .9em;
+    margin-left: 15px;
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    line-height: 25px;
+}
+
+.btn-line {
+    display: flex;
+    justify-content: space-between;
+    padding: .2em 1.3em;
+    margin-top: .5em;
+}
+
+.btn-line .btn-card-controll {
+    border: none;
+    color: var(--Desaturated-blue);
+    background-color: transparent;
+}
+
+.btn-card-controll.active {
+    color: #fff;
+}
+
+#desk {
+    display: none;
+}
+
+#username {
+    font-size: 1em !important;
+    font-weight: 400;
+    
+    color: #fff;
+}
+
+.work {
+  background-color: var(--Light-red-work);
+}
+
+.play {
+    background-color: var(--Soft-blue-play);
+}
+
+.study {
+    background-color: var(--Light-red-study);
+}
+
+.exercise {
+    background-color: var(--Lime-green-exercise);
+}
+
+.social {
+   background-color: var(--Violet-social);   
+}
+
+.self {
+    background-color: var(--Soft-orange-self-care);
+}
+
+
+main .mini-card {
+    position: relative;
+    overflow: hidden;
+}
+
+main .mini-card .mini-card-bg .im-item {
+    position: relative;
+    top: -10px;
+    left: 210px;
+}
+
+
+
+main .mini-card .mini-card-info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 0.7em 1em;
+ position: absolute;
+ width: 100%;
+ top:45px;
+ left: 0;
+ height: 300px;
+ background-color: var(--Dark-blue);
+ border-radius: 10px;
+}
+
+
+main .mini-card .mini-card-info .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .4em 0;
+    color: var(--Pale-Blue);
+} 
+
+main .mini-card .mini-card-info .row .hours {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+main .mini-card .mini-card-info .row  .row-title {
+    font-weight: 400;
+    color: #fff;
+}
+
+main .mini-card .mini-card-info .row .hours-complement-info {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: var(--Desaturated-blue);
+    margin-top: .2em;
+}

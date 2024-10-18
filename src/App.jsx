@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MiniCards from './components/cardItem';
 import data from './data';
+import './App.css'
 import profile from './assets/img/image-jeremy.png';
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
 
   const Cards = data.map(item => {
     return (
-       currentDash === 'daily' ?  <MiniCards title={item.title} tipo={item.timeframes.daily.current} info={'daily'} subtipo={item.timeframes.daily.previous} img={item.img}  /> : currentDash === 'weekly' ?  <MiniCards title={item.title} tipo={item.timeframes.weekly.current} subtipo={item.timeframes.weekly.previous} img={item.img} info={'Last  Weekly'}  /> : currentDash === 'monthly' ?  <MiniCards title={item.title} tipo={item.timeframes.monthly.current} subtipo={item.timeframes.monthly.previous} img={item.img} info={' Last Monthly'} /> : 'none'
+       currentDash === 'daily' ?  <MiniCards title={item.title} tipo={item.timeframes.daily.current} class={item.class} info={'daily'} subtipo={item.timeframes.daily.previous} img={item.img}  /> : currentDash === 'weekly' ?  <MiniCards title={item.title} tipo={item.timeframes.weekly.current} subtipo={item.timeframes.weekly.previous} class={item.class} img={item.img} info={'Last  Weekly'}  /> : currentDash === 'monthly' ?  <MiniCards title={item.title} tipo={item.timeframes.monthly.current} subtipo={item.timeframes.monthly.previous} img={item.img} class={item.class} info={' Last Monthly'} /> : 'none'
     )
   })
 
@@ -53,7 +54,7 @@ function App() {
         <h1>Report for <br id='mobile'/> <span id='username'>Jeremy <br id='desk'/>  Robson</span> </h1>
       </div>
     <div className='btn-line' aria-labelledby='controle bar'>
-       <button className='btn-card-controll' aria-label="daily option"  onClick={dailyBtn}>Daily</button>
+       <button className='btn-card-controll active' aria-label="daily option"  onClick={dailyBtn}>Daily</button>
        <button className='btn-card-controll' aria-label="weekly option"  onClick={weeklyBtn}>Weekly</button>
        <button className='btn-card-controll' aria-label="monthly option"  onClick={monthlyBtn}>Monthly</button>
       </div>
